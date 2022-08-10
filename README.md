@@ -1,6 +1,6 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![HTML](https://img.shields.io/badge/-HTML-orange) ![CSS](https://img.shields.io/badge/-CSS-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
 
-# [To Do list: list structure](https://github.com/microverseinc/curriculum-javascript/blob/main/todo-list/m1_list_structure.md)
+# [To Do list](https://github.com/microverseinc/curriculum-javascript/blob/main/todo-list/m1_list_structure.md)
 - "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
 ## Getting Started
