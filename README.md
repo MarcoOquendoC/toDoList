@@ -19,7 +19,6 @@ To get a local copy up and running follow these simple steps.
   - cd toDoList
 - **Type the following lists of commands and press ENTER after each command:**
   - *Basic Setup*
-    - npm init -y
     - npm install webpack webpack-cli --save-dev
     - npm install --save lodash
     - npx webpack
