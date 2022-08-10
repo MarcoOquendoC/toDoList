@@ -1,7 +1,7 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![HTML](https://img.shields.io/badge/-HTML-orange) ![CSS](https://img.shields.io/badge/-CSS-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
 
-# Webpack
-- Build a simple yet powerful webpack boilerplate. To be used as a starting point in projects. Working with the webpack official guides.
+# [To Do list: list structure](https://github.com/microverseinc/curriculum-javascript/blob/main/todo-list/m1_list_structure.md)
+- "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
@@ -12,11 +12,11 @@ To get a local copy up and running follow these simple steps.
 ### Setup
 - Open the terminal on your computer
 - Navigate through directories using [change directory (cd)](https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10) command to where you want to clone the repository.
-- Type the following command then press ENTER: 
-  - git clone https://github.com/MarcoOquendoC/Webpack.git
+- **Type the following command then press ENTER:**
+  - git clone https://github.com/MarcoOquendoC/toDoList
 - the terminal will send to you information about your download.
-- Type the following command then press ENTER: 
-  - cd Webpack
+- **Type the following command then press ENTER:**
+  - cd toDoList
 - **Type the following lists of commands and press ENTER after each command:**
   - *Basic Setup*
     - npm init -y
@@ -25,18 +25,14 @@ To get a local copy up and running follow these simple steps.
     - npx webpack
     - npx webpack --config webpack.config.js
     - npm run build
-
   - *Setting up HtmlWebpackPlugin*
     - npm install --save-dev html-webpack-plugin
     - npm run build
-
   - *Add CSS*
     - npm install --save-dev style-loader css-loader
     - npm run build
-
   - *Setup local dev server*
     - npm install --save-dev webpack-dev-server
-
   - *Setup linters*
     - npm install --save-dev hint@7.x
     - npx hint .
@@ -44,7 +40,6 @@ To get a local copy up and running follow these simple steps.
     - npx stylelint "**/*.{css,scss}"
     - npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
     - npx eslint .
-
   - **Open folder in VSC**
     - code .
 
@@ -55,7 +50,7 @@ To get a local copy up and running follow these simple steps.
 - **Webpack:** used as a bundle to compile JavaScript modules.
 
 ## 🌎 Live Demo:
-- [Webpack](https://marcooquendoc.github.io/Webpack/)
+- [toDoList](https://marcooquendoc.github.io/toDoList/)
 
 ## Authors 
 ### 👤 Marco Oquendo
