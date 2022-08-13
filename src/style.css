@@ -5,7 +5,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-/*   outline: auto; */
+
+  /*   outline: auto; */
 }
 
 body {
@@ -137,20 +138,18 @@ li:hover .delBtn {
   position: absolute;
 }
 
-
-
 .listItem label::before {
   content: '';
   width: 1em;
   height: 1em;
-  border-radius: .15em;
-  margin-right: .5em;
-  border: .05em solid black;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  border: 0.05em solid black;
 }
 
 .listItem label:hover::before,
 .listItem input[type='checkbox']:hover + label::before {
-  background-color: #35E07D;
+  background-color: #35e07d;
 }
 
 .listItem input[type='checkbox']:focus + label::before {
@@ -165,7 +164,7 @@ li:hover .delBtn {
 
 .listItem input[type='checkbox']:checked + label::before {
   content: '\002714';
-  background-color: #27AE60;
+  background-color: #27ae60;
   display: flex;
   justify-content: center;
   align-items: center;
