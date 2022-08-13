@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico">
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+  <header>
+    <h1 class="listGreeting">To Do List App 📑</h1>
+  </header>
+  <main>
+    <h2 class="todo">Today's To Do</h2>
+    <form id="form">
+      <input type="text" id="addTask" placeholder="Add to your list...">
+      <button id="addBtn" type="submit">⎆</button>
+    </form>
+    <ol id="list">
+      <!-- Rendered items from js -->
+    </ol>
+    <button type="button" class="clear">Clear all completed</button>
+  </main>
 </body>
+
 </html>
