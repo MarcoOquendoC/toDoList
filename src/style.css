@@ -44,6 +44,7 @@ main {
 #addTask {
   width: 100%;
   border: none;
+  padding-left: 1rem;
   background-color: white;
 }
 

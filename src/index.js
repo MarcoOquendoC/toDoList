@@ -1,57 +1,29 @@
 /* import _ from 'lodash'; */
 import './style.css';
+import Method from './assets/scripts/methods.js';
+
+Method.setIndexes();
+Method.render();
+
+const form = document.querySelector('#form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const description = e.target.firstChild.nextSibling.value;
+  Method.add(description);
+  e.target.firstChild.nextSibling.value = '';
+});
 
 const list = document.querySelector('#list');
-
-const data = [
-  {
-    id: 0,
-    editable: false,
-    completed: true,
-    description: 'Wash the dishes',
-  },
-  {
-    id: 0,
-    editable: true,
-    completed: false,
-    description: 'currently editable',
-  },
-  {
-    id: 0,
-    editable: false,
-    completed: false,
-    description: 'Complete To Do list project',
-  },
-];
-
-class Data {
-  static setIndexes() {
-    data.forEach((element, index) => {
-      element.id = index + 1;
-    });
+list.addEventListener('click', (e) => {
+  if (e.target.textContent === '🗑') {
+    let { id } = e.target.parentElement.parentElement;
+    id = Number(id.slice(1));
+    Method.remove(id);
+    return;
   }
 
-  static render() {
-    list.innerHTML = '';
-    data.forEach((element, index) => {
-      const checked = element.completed ? 'checked' : '';
-      const active = element.editable ? 'active' : '';
-      const disable = element.editable ? '' : 'disabled';
-      list.innerHTML
-      += `
-        <li class="listItem" draggable="${!element.editable}">
-          <input id="check${index}" type="checkbox" name="completed" class="check" ${checked}>
-          <label for="check${index}">${element.id}</label>
-          <input value="${element.description}" type="text" name="description" class="description" ${disable}>
-          <div>
-            <button type="button" class="iconBtn editBtn ${active}"><strong>🖊</strong></button>
-            <button type="button" class="iconBtn delBtn"><strong>🗑</strong></button>
-          </div>
-        </li>
-      `;
-    });
+  if (e.target.textContent === '🖊') {
+    e.target.classList.toggle('active');
+    e.target.parentElement.previousSibling.previousSibling.toggleAttribute('disabled');
   }
-}
-
-Data.setIndexes();
-Data.render();
+});
