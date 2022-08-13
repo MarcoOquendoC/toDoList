@@ -1,4 +1,198 @@
-.hello {
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+body {
+  margin: auto;
+}
+
+header {
+  margin: auto;
+  max-width: 400px;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  max-width: 500px;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(246, 246, 246);
+}
+
+.listGreeting {
+  padding: 1rem;
+  text-align: center;
+}
+
+.todo {
+  padding-top: 1rem;
+}
+
+#form {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+#addTask {
+  width: 100%;
+  border: none;
+  background-color: white;
+}
+
+#addBtn {
+  border: none;
+  font-size: 2rem;
+  min-width: 20px;
+  padding: 0 5px 10px 0;
+  background-color: transparent;
+}
+
+#addBtn:active {
   color: red;
-  background: url('./icon.png');
+}
+
+#addTask:active {
+  width: 100%;
+  border: none;
+}
+
+#list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: transparent;
+}
+
+.id {
+  display: none;
+}
+
+.listItem {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  margin: 1px 1px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+
+.listItem label {
+  display: flex;
+  cursor: pointer;
+  color: transparent;
+  align-items: center;
+}
+
+.listItem .description {
+  border: none;
+  flex-basis: 80%;
+}
+
+.iconBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+
+.delBtn {
+  scale: 0;
+  cursor: pointer;
+  transition: scale 500ms ease-in-out;
+}
+
+.delBtn:hover li {
+  cursor: pointer;
+}
+
+.iconBtn:active {
+  color: red;
+}
+
+.editBtn.active {
+  color: orange;
+  transform: rotate(37deg);
+}
+
+li:hover .delBtn {
+  scale: 1;
+}
+
+.listItem input[type='checkbox'] {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.listItem label::before {
+  width: 1em;
+  height: 1em;
+  content: '';
+  margin-right: 0.5em;
+  border-radius: 0.15em;
+  border: 0.05em solid black;
+}
+
+.listItem label:hover::before,
+.listItem input[type='checkbox']:hover + label::before {
+  background-color: #35e07d;
+}
+
+.listItem input[type='checkbox']:focus + label::before {
+  box-shadow: 0 0 20px black;
+}
+
+.listItem input[type='checkbox']:disabled + label,
+.listItem input[type='checkbox']:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+.listItem input[type='checkbox']:checked + label::before {
+  display: flex;
+  color: white;
+  content: '\002714';
+  align-items: center;
+  justify-content: center;
+  background-color: #27ae60;
+}
+
+.listItem input[type='checkbox']:disabled + label::before {
+  border-color: #999;
+  background-color: #ccc;
+}
+
+.description:disabled {
+  cursor: move;
+}
+
+.clear {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  background-color: rgb(235, 235, 235);
+}
+
+.clear:hover {
+  background-color: #e8e8e8;
+}
+
+.clear:active {
+  background-color: #999;
+}
+
+.listItem div {
+  min-width: 40px;
 }
