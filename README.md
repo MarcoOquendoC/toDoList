@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple steps.
 - **Webpack:** used as a bundle to compile JavaScript modules.
 
 ## 🌎 Live Demo:
-- [toDoList](https://marcooquendoc.github.io/toDoList/)
+- [toDoList](https://marcooquendoc.github.io/toDoList/dist/)
 
 ## Authors 
 ### 👤 Marco Oquendo
