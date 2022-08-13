@@ -1,5 +1,5 @@
 /* import _ from 'lodash'; */
-/* import './style.css'; */
+import './style.css';
 import Method from './assets/scripts/methods.js';
 
 Method.setIndexes();
