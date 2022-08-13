@@ -45,6 +45,7 @@ main {
   width: 100%;
   border: none;
   background-color: white;
+  padding-left: 1rem;
 }
 
 #addBtn {
