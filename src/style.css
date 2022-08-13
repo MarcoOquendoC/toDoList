@@ -1,4 +1,201 @@
-.hello {
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+  font-family: 'Mochiy Pop One', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/*   outline: auto; */
+}
+
+body {
+  margin: auto;
+}
+
+header {
+  max-width: 400px;
+  margin: auto;
+}
+
+main {
+  margin: auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+}
+
+.listGreeting {
+  text-align: center;
+  padding: 1rem;
+}
+
+.todo {
+  padding-top: 1rem;
+}
+
+#form {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#addTask {
+  width: 100%;
+  border: none;
+  background-color: white;
+}
+
+#addBtn {
+  min-width: 20px;
+  font-size: 2rem;
+  padding: 0 5px 10px 0;
+  border: none;
+  background-color: transparent;
+}
+
+#addBtn:active {
   color: red;
-  background: url('./icon.png');
+}
+
+#addTask:active {
+  width: 100%;
+  border: none;
+}
+
+#list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: transparent;
+}
+
+.id {
+  display: none;
+}
+
+.listItem {
+  margin: 1px 1px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+
+.listItem label {
+  cursor: pointer;
+  display: flex;
+  color: transparent;
+  align-items: center;
+}
+
+.listItem .description {
+  flex-basis: 80%;
+  border: none;
+}
+
+.iconBtn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+}
+
+.delBtn {
+  cursor: pointer;
+  scale: 0;
+  transition: scale 500ms ease-in-out;
+}
+
+.delBtn:hover li {
+  cursor: pointer;
+}
+
+.iconBtn:active {
+  color: red;
+}
+
+.editBtn.active {
+  transform: rotate(37deg);
+  color: red;
+}
+
+li:hover .delBtn {
+  scale: 1;
+}
+
+.listItem input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+
+
+.listItem label::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: .15em;
+  margin-right: .5em;
+  border: .05em solid black;
+}
+
+.listItem label:hover::before,
+.listItem input[type='checkbox']:hover + label::before {
+  background-color: #35E07D;
+}
+
+.listItem input[type='checkbox']:focus + label::before {
+  box-shadow: 0 0 20px black;
+}
+
+.listItem input[type='checkbox']:disabled + label,
+.listItem input[type='checkbox']:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+.listItem input[type='checkbox']:checked + label::before {
+  content: '\002714';
+  background-color: #27AE60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.listItem input[type='checkbox']:disabled + label::before {
+  background-color: #ccc;
+  border-color: #999;
+}
+
+.description:disabled {
+  cursor: move;
+}
+
+.clear {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(235, 235, 235);
+}
+
+.clear:hover {
+  background-color: #e8e8e8;
+}
+
+.clear:active {
+  background-color: #999;
+}
+
+.listItem div {
+  min-width: 40px;
 }
