@@ -1,5 +1,5 @@
 /* import _ from 'lodash'; */
-import './style.css';
+/* import './style.css'; */
 import Method from './assets/scripts/methods.js';
 
 Method.setIndexes();
@@ -19,5 +19,11 @@ list.addEventListener('click', (e) => {
     let { id } = e.target.parentElement.parentElement;
     id = Number(id.slice(1));
     Method.remove(id);
+    return
+  }
+
+  if (e.target.textContent === '🖊') {
+    e.target.classList.toggle('active');
+    e.target.parentElement.previousSibling.previousSibling.toggleAttribute('disabled');
   }
 });
