@@ -20,7 +20,7 @@ export default class Method {
       tasks.forEach((element) => {
         const checked = element.completed ? 'checked' : '';
         const editableActive = element.editable ? 'active' : '';
-        const editableDisable = element.editable ? '' : 'disabled'
+        const editableDisable = element.editable ? '' : 'disabled';
         list.innerHTML
         += `
           <li id="e${element.id}" class="listItem" draggable="true">
@@ -77,7 +77,8 @@ export default class Method {
     const storage = localStorage.getItem('tasks');
     const tasks = storage ? JSON.parse(storage) : [];
     if (tasks === []) return -1;
-    tasks[id].editable = tasks[id].editable ? false : true;
+    tasks[id].editable = !tasks[id].editable;
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    return 'Edit state has been toggled';
   }
 }

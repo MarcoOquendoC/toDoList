@@ -1,5 +1,5 @@
 /* import _ from 'lodash'; */
-/* import './style.css'; */
+import './style.css';
 import Method from './assets/scripts/methods.js';
 import Status from './assets/scripts/status.js';
 
@@ -29,7 +29,6 @@ list.addEventListener('click', (e) => {
     Method.toggleEdit(id);
     e.target.classList.toggle('active');
     e.target.parentElement.previousSibling.previousSibling.toggleAttribute('disabled');
-    return
   }
 });
 
@@ -38,16 +37,15 @@ list.addEventListener('input', (e) => {
   id = Number(id.slice(1));
   if (e.target.matches('.description')) {
     Status.changeDescription(e.target.value, id);
-    return
+    return;
   }
 
   if (e.target.matches('.check')) {
     Status.toggleComplete(id);
-    return
   }
 });
 
 const clearBtn = document.querySelector('.clear');
 clearBtn.addEventListener('click', () => {
-  Status.clearCompleted()
+  Status.clearCompleted();
 });
