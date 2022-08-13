@@ -46,3 +46,8 @@ list.addEventListener('input', (e) => {
     return
   }
 });
+
+const clearBtn = document.querySelector('.clear');
+clearBtn.addEventListener('click', () => {
+  Status.clearCompleted()
+});
