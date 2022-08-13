@@ -1,6 +1,7 @@
 /* import _ from 'lodash'; */
-/* import './style.css'; */
+import './style.css';
 import Method from './assets/scripts/methods.js';
+
 Method.setIndexes();
 Method.render();
 
@@ -15,10 +16,8 @@ form.addEventListener('submit', (e) => {
 const list = document.querySelector('#list');
 list.addEventListener('click', (e) => {
   if (e.target.textContent === '🗑') {
-    const id = (e.target.parentElement.previousSibling.previousSibling.previousSibling.previousSibling.textContent);
-    const description = e.target.parentElement.previousSibling.previousSibling.value
-    console.log('id =', id)
-    console.log('description =', description)
+    let { id } = e.target.parentElement.parentElement;
+    id = Number(id.slice(1));
     Method.remove(id);
   }
 });

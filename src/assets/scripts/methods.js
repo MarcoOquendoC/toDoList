@@ -4,7 +4,7 @@ export default class Method {
   static setIndexes() {
     const storage = localStorage.getItem('tasks');
     const tasks = storage ? JSON.parse(storage) : [];
-    if(tasks !== []) {
+    if (tasks !== []) {
       tasks.forEach((element, index) => { element.id = index; });
       localStorage.setItem('tasks', JSON.stringify(tasks));
     }
@@ -16,14 +16,14 @@ export default class Method {
     const tasks = storage ? JSON.parse(storage) : [];
     const list = document.querySelector('#list');
     list.innerHTML = '';
-    if(tasks !== []) {
-      tasks.forEach((element, index) => {
+    if (tasks !== []) {
+      tasks.forEach((element) => {
         const checked = element.completed ? 'checked' : '';
         list.innerHTML
         += `
-          <li class="listItem" draggable="true">
-            <input id="check${index}" type="checkbox" name="completed" class="check" ${checked}>
-            <label for="check${index}">${element.id}</label>
+          <li id="e${element.id}" class="listItem" draggable="true">
+            <input id="check${element.id}" type="checkbox" name="completed" class="check" ${checked}>
+            <label for="check${element.id}">${element.id}</label>
             <input value="${element.description}" type="text" name="description" class="description" disabled>
             <div>
               <button type="button" class="iconBtn editBtn">🖊</button>
@@ -36,20 +36,20 @@ export default class Method {
   }
 
   static add(description) {
-    if(!description) return -1
+    if (!description) return -1;
     const storage = localStorage.getItem('tasks');
     const tasks = storage ? JSON.parse(storage) : [];
 
-    const task = new Task(description, tasks.length)
-    tasks.push(task)
+    const task = new Task(description, tasks.length);
+    tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
     const list = document.querySelector('#list');
     list.innerHTML
       += `
-        <li class="listItem" draggable="true">
-          <input id="check${tasks.length}" type="checkbox" name="completed" class="check">
-          <label for="check${tasks.length}">${tasks.length-1}</label>
+        <li id="e${tasks.length - 1}" class="listItem" draggable="true">
+          <input id="check${tasks.length - 1}" type="checkbox" name="completed" class="check">
+          <label for="check${tasks.length - 1}">${tasks.length - 1}</label>
           <input value="${description}" type="text" name="description" class="description" disabled>
           <div>
             <button type="button" class="iconBtn editBtn">🖊</button>
@@ -61,14 +61,13 @@ export default class Method {
   }
 
   static remove(id) {
-    if(!id) return -1
     const storage = localStorage.getItem('tasks');
     const tasks = storage ? JSON.parse(storage) : [];
-    if(tasks !== []) {
-      tasks.splice(id, 1);
-      localStorage.setItem('tasks', JSON.stringify(tasks));
-    }
-    Method.setIndexes()
+    if (tasks === []) return -1;
+    const removed = tasks.splice(id, 1);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    Method.setIndexes();
     Method.render();
+    return removed;
   }
 }
