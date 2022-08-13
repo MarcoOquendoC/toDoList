@@ -32,3 +32,15 @@ list.addEventListener('click', (e) => {
     return
   }
 });
+
+list.addEventListener('input', (e) => {
+  let { id } = e.target.parentElement;
+  id = Number(id.slice(1));
+  if (e.target.matches('.description')) {
+    Status.changeDescription(e.target.value, id);
+  }
+
+  if (e.target.matches('.check')) {
+    Status.toggleComplete(id);
+  }
+});
