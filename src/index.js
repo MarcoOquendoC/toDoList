@@ -1,6 +1,7 @@
 /* import _ from 'lodash'; */
 import './style.css';
 import Method from './assets/scripts/methods.js';
+import Status from './assets/scripts/status.js';
 
 Method.setIndexes();
 Method.render();
@@ -23,7 +24,28 @@ list.addEventListener('click', (e) => {
   }
 
   if (e.target.textContent === '🖊') {
+    let { id } = e.target.parentElement.parentElement;
+    id = Number(id.slice(1));
+    Method.toggleEdit(id);
     e.target.classList.toggle('active');
     e.target.parentElement.previousSibling.previousSibling.toggleAttribute('disabled');
   }
+});
+
+list.addEventListener('input', (e) => {
+  let { id } = e.target.parentElement;
+  id = Number(id.slice(1));
+  if (e.target.matches('.description')) {
+    Status.changeDescription(e.target.value, id);
+    return;
+  }
+
+  if (e.target.matches('.check')) {
+    Status.toggleComplete(id);
+  }
+});
+
+const clearBtn = document.querySelector('.clear');
+clearBtn.addEventListener('click', () => {
+  Status.clearCompleted();
 });
