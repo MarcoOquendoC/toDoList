@@ -1,6 +1,7 @@
 /* import _ from 'lodash'; */
-import './style.css';
+/* import './style.css'; */
 import Method from './assets/scripts/methods.js';
+import Status from './assets/scripts/status.js';
 
 Method.setIndexes();
 Method.render();
@@ -23,7 +24,11 @@ list.addEventListener('click', (e) => {
   }
 
   if (e.target.textContent === '🖊') {
+    let { id } = e.target.parentElement.parentElement;
+    id = Number(id.slice(1));
+    Method.toggleEdit(id);
     e.target.classList.toggle('active');
     e.target.parentElement.previousSibling.previousSibling.toggleAttribute('disabled');
+    return
   }
 });
