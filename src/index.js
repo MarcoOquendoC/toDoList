@@ -38,9 +38,11 @@ list.addEventListener('input', (e) => {
   id = Number(id.slice(1));
   if (e.target.matches('.description')) {
     Status.changeDescription(e.target.value, id);
+    return
   }
 
   if (e.target.matches('.check')) {
     Status.toggleComplete(id);
+    return
   }
 });
