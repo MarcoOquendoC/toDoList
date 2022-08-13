@@ -19,14 +19,16 @@ export default class Method {
     if (tasks !== []) {
       tasks.forEach((element) => {
         const checked = element.completed ? 'checked' : '';
+        const editableActive = element.editable ? 'active' : '';
+        const editableDisable = element.editable ? '' : 'disabled'
         list.innerHTML
         += `
           <li id="e${element.id}" class="listItem" draggable="true">
             <input id="check${element.id}" type="checkbox" name="completed" class="check" ${checked}>
             <label for="check${element.id}">${element.id}</label>
-            <input value="${element.description}" type="text" name="description" class="description" disabled>
+            <input value="${element.description}" type="text" name="description" class="description" ${editableDisable}>
             <div>
-              <button type="button" class="iconBtn editBtn">🖊</button>
+              <button type="button" class="iconBtn editBtn ${editableActive}">🖊</button>
               <button type="button" class="iconBtn delBtn">🗑</button>
             </div>
           </li>
@@ -69,5 +71,13 @@ export default class Method {
     Method.setIndexes();
     Method.render();
     return removed;
+  }
+
+  static toggleEdit(id) {
+    const storage = localStorage.getItem('tasks');
+    const tasks = storage ? JSON.parse(storage) : [];
+    if (tasks === []) return -1;
+    tasks[id].editable = tasks[id].editable ? false : true;
+    localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 }
