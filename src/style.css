@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
 * {
-  font-family: 'Mochiy Pop One', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  /*   outline: auto; */
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 body {
@@ -14,22 +12,22 @@ body {
 }
 
 header {
-  max-width: 400px;
   margin: auto;
+  max-width: 400px;
 }
 
 main {
   margin: auto;
-  max-width: 500px;
   display: flex;
-  flex-direction: column;
+  max-width: 500px;
   align-items: center;
+  flex-direction: column;
   background-color: rgb(246, 246, 246);
 }
 
 .listGreeting {
-  text-align: center;
   padding: 1rem;
+  text-align: center;
 }
 
 .todo {
@@ -37,9 +35,9 @@ main {
 }
 
 #form {
-  padding: 1rem;
   width: 100%;
   display: flex;
+  padding: 1rem;
   justify-content: space-between;
 }
 
@@ -50,10 +48,10 @@ main {
 }
 
 #addBtn {
-  min-width: 20px;
-  font-size: 2rem;
-  padding: 0 5px 10px 0;
   border: none;
+  font-size: 2rem;
+  min-width: 20px;
+  padding: 0 5px 10px 0;
   background-color: transparent;
 }
 
@@ -81,37 +79,37 @@ input {
 }
 
 .listItem {
-  margin: 1px 1px;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
   width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  margin: 1px 1px;
+  align-items: center;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
 }
 
 .listItem label {
-  cursor: pointer;
   display: flex;
+  cursor: pointer;
   color: transparent;
   align-items: center;
 }
 
 .listItem .description {
-  flex-basis: 80%;
   border: none;
+  flex-basis: 80%;
 }
 
 .iconBtn {
-  cursor: pointer;
   border: none;
-  background-color: transparent;
+  cursor: pointer;
   font-size: 1.3rem;
+  background-color: transparent;
 }
 
 .delBtn {
-  cursor: pointer;
   scale: 0;
+  cursor: pointer;
   transition: scale 500ms ease-in-out;
 }
 
@@ -124,8 +122,8 @@ input {
 }
 
 .editBtn.active {
+  color: orange;
   transform: rotate(37deg);
-  color: red;
 }
 
 li:hover .delBtn {
@@ -133,17 +131,17 @@ li:hover .delBtn {
 }
 
 .listItem input[type='checkbox'] {
-  cursor: pointer;
   opacity: 0;
+  cursor: pointer;
   position: absolute;
 }
 
 .listItem label::before {
-  content: '';
   width: 1em;
   height: 1em;
-  border-radius: 0.15em;
+  content: '';
   margin-right: 0.5em;
+  border-radius: 0.15em;
   border: 0.05em solid black;
 }
 
@@ -163,17 +161,17 @@ li:hover .delBtn {
 }
 
 .listItem input[type='checkbox']:checked + label::before {
-  content: '\002714';
-  background-color: #27ae60;
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
+  content: '\002714';
+  align-items: center;
+  justify-content: center;
+  background-color: #27ae60;
 }
 
 .listItem input[type='checkbox']:disabled + label::before {
-  background-color: #ccc;
   border-color: #999;
+  background-color: #ccc;
 }
 
 .description:disabled {
@@ -181,8 +179,8 @@ li:hover .delBtn {
 }
 
 .clear {
-  border: none;
   width: 100%;
+  border: none;
   padding: 1rem;
   background-color: rgb(235, 235, 235);
 }
