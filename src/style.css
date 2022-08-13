@@ -197,3 +197,8 @@ li:hover .delBtn {
 .listItem div {
   min-width: 40px;
 }
+
+.listItem input[type='checkbox']:checked + label + input {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
