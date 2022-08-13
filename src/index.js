@@ -19,7 +19,7 @@ list.addEventListener('click', (e) => {
     let { id } = e.target.parentElement.parentElement;
     id = Number(id.slice(1));
     Method.remove(id);
-    return
+    return;
   }
 
   if (e.target.textContent === '🖊') {
