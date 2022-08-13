@@ -61,5 +61,8 @@ To get a local copy up and running follow these simple steps.
 ## Show your support
 - Give a ⭐️ if you like this project!
 
+## Acknowledgments
+- Original checkbox design idea by Kile from "Web Dev Simplified" YouTube Channel in [this video](https://www.youtube.com/watch?v=YyLzwR-iXtI).
+
 ## 📝 License
 - This project is [MIT](./LICENSE) licensed.
