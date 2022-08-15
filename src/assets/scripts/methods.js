@@ -23,7 +23,7 @@ export default class Method {
         const editableDisable = element.editable ? '' : 'disabled';
         list.innerHTML
         += `
-          <li id="e${element.id}" class="listItem" draggable="true">
+          <li id="e${element.id}" class="listItem" draggable="${element.editable}">
             <input id="check${element.id}" type="checkbox" name="completed" class="check" ${checked}>
             <label for="check${element.id}">${element.id}</label>
             <input value="${element.description}" type="text" name="description" class="description" ${editableDisable}>
