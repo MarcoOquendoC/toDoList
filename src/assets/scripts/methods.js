@@ -65,7 +65,7 @@ export default class Method {
   static remove(id) {
     const storage = localStorage.getItem('tasks');
     const tasks = storage ? JSON.parse(storage) : [];
-    if (tasks === []) return -1;
+    if (tasks === []) return -1; // YARN
     const removed = tasks.splice(id, 1);
     localStorage.setItem('tasks', JSON.stringify(tasks));
     Method.setIndexes();
