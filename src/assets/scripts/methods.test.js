@@ -1,6 +1,5 @@
 /** * @jest-environment jsdom */
 
-import { isEmpty } from 'lodash';
 import Method from './methods.js'
 
 describe ('Add task feature', () => {
@@ -21,5 +20,5 @@ describe ('Add task feature', () => {
     let htmlTasks = document.querySelectorAll('.listItem')
     expect(htmlTasks).toHaveLength(2);
   });
-  
+
 })
