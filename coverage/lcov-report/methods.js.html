@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.25% </span>
+                <span class="strong">81.39% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/43</span>
+                <span class='fraction'>35/43</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/26</span>
+                <span class='fraction'>13/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.07% </span>
+                <span class="strong">84.61% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/39</span>
+                <span class='fraction'>33/39</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -151,26 +151,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,14 +212,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -234,27 +234,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Task from './constructor.js';
 &nbsp;
 export default class Method {
-<span class="fstat-no" title="function not covered" >  st</span>atic setIndexes() {
-    const storage = <span class="cstat-no" title="statement not covered" >localStorage.getItem('tasks');</span>
-    const tasks = <span class="cstat-no" title="statement not covered" >storage ? JSON.parse(storage) : [];</span>
-<span class="cstat-no" title="statement not covered" >    if (tasks !== []) {</span>
-<span class="cstat-no" title="statement not covered" >      tasks.forEach(<span class="fstat-no" title="function not covered" >(e</span>lement, index) =&gt; { <span class="cstat-no" title="statement not covered" >element.id = index; </span>});</span>
-<span class="cstat-no" title="statement not covered" >      localStorage.setItem('tasks', JSON.stringify(tasks));</span>
+  static setIndexes() {
+    const storage = localStorage.getItem('tasks');
+    const tasks = storage ? JSON.parse(storage) : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (tasks !== []) {
+      tasks.forEach((element, index) =&gt; { element.id = index; });
+      localStorage.setItem('tasks', JSON.stringify(tasks));
     }
-<span class="cstat-no" title="statement not covered" >    return tasks;</span>
+    return tasks;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  st</span>atic render() {
-    const storage = <span class="cstat-no" title="statement not covered" >localStorage.getItem('tasks');</span>
-    const tasks = <span class="cstat-no" title="statement not covered" >storage ? JSON.parse(storage) : [];</span>
-    const list = <span class="cstat-no" title="statement not covered" >document.querySelector('#list');</span>
-<span class="cstat-no" title="statement not covered" >    list.innerHTML = '';</span>
-<span class="cstat-no" title="statement not covered" >    if (tasks !== []) {</span>
-<span class="cstat-no" title="statement not covered" >      tasks.forEach(<span class="fstat-no" title="function not covered" >(e</span>lement) =&gt; {</span>
-        const checked = <span class="cstat-no" title="statement not covered" >element.completed ? 'checked' : '';</span>
-        const editableActive = <span class="cstat-no" title="statement not covered" >element.editable ? 'active' : '';</span>
-        const editableDisable = <span class="cstat-no" title="statement not covered" >element.editable ? '' : 'disabled';</span>
-<span class="cstat-no" title="statement not covered" >        list.innerHTML</span>
+  static render() {
+    const storage = localStorage.getItem('tasks');
+    const tasks = storage ? JSON.parse(storage) : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+    const list = document.querySelector('#list');
+    list.innerHTML = '';
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (tasks !== []) {
+      tasks.forEach((element) =&gt; {
+        const checked = element.completed ? <span class="branch-0 cbranch-no" title="branch not covered" >'checked' </span>: '';
+        const editableActive = element.editable ? <span class="branch-0 cbranch-no" title="branch not covered" >'active' </span>: '';
+        const editableDisable = element.editable ? <span class="branch-0 cbranch-no" title="branch not covered" >'' </span>: 'disabled';
+        list.innerHTML
         += `
           &lt;li id="e${element.id}" class="listItem" draggable="true"&gt;
             &lt;input id="check${element.id}" type="checkbox" name="completed" class="check" ${checked}&gt;
@@ -295,15 +295,15 @@ export default class Method {
     return tasks;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  st</span>atic remove(id) {
-    const storage = <span class="cstat-no" title="statement not covered" >localStorage.getItem('tasks');</span>
-    const tasks = <span class="cstat-no" title="statement not covered" >storage ? JSON.parse(storage) : [];</span>
-<span class="cstat-no" title="statement not covered" >    if (tasks === []) <span class="cstat-no" title="statement not covered" >return -1;</span></span>
-    const removed = <span class="cstat-no" title="statement not covered" >tasks.splice(id, 1);</span>
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem('tasks', JSON.stringify(tasks));</span>
-<span class="cstat-no" title="statement not covered" >    Method.setIndexes();</span>
-<span class="cstat-no" title="statement not covered" >    Method.render();</span>
-<span class="cstat-no" title="statement not covered" >    return removed;</span>
+  static remove(id) {
+    const storage = localStorage.getItem('tasks');
+    const tasks = storage ? JSON.parse(storage) : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (tasks === []) <span class="cstat-no" title="statement not covered" >return -1; </span>// YARN
+    const removed = tasks.splice(id, 1);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    Method.setIndexes();
+    Method.render();
+    return removed;
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  st</span>atic toggleEdit(id) {
@@ -322,7 +322,7 @@ export default class Method {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-08-17T19:09:31.880Z
+                at 2022-08-17T20:02:48.592Z
             </div>
         <script src="prettify.js"></script>
         <script>
