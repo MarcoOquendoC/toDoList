@@ -21,3 +21,13 @@ describe ('Add task feature', () => {
     expect(htmlTasks).toHaveLength(2);
   });
 });
+
+describe ('Remove task feature', () => {
+  test('correct removing feature', () => {
+    let htmlTasks = document.querySelectorAll('.listItem');
+    expect(htmlTasks).toHaveLength(2);
+    Method.remove(1);
+    htmlTasks = document.querySelectorAll('.listItem');
+    expect(htmlTasks).toHaveLength(1);
+  });
+});
