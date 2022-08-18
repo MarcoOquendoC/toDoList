@@ -1,6 +1,5 @@
 /** * @jest-environment jsdom */
 
-import { TestEnvironment } from 'jest-environment-jsdom';
 import Method from './methods.js';
 import Status from './status.js';
 
@@ -13,7 +12,7 @@ describe('Update input', () => {
     expect(Status.changeDescription('Awesome task', 0)).toBe('Awesome task');
   });
   test('Updating a task should replace the task in the local storage', () => {
-    Status.changeDescription('Awesome local storage task', 0)
+    Status.changeDescription('Awesome local storage task', 0);
     const storage = localStorage.getItem('tasks');
     const localTask = storage ? JSON.parse(storage) : [];
     expect(localTask[0].description).toBe('Awesome local storage task');
@@ -57,4 +56,3 @@ describe('Clear all completed tasks', () => {
     expect(localTask).toHaveLength(3);
   });
 });
-
