@@ -19,3 +19,22 @@ describe('Update input', () => {
     expect(localTask[0].description).toBe('Awesome local storage task');
   });
 });
+
+describe('Update completed status', () => {
+  test('Adding a task should return the new task', () => {
+    Method.add('Good task');
+    expect(Status.changeDescription('Awesome task', 0)).toBe('Awesome task');
+  });
+  test('Checking a task should set true to "completed" state in local storage', () => {
+    Status.toggleComplete(0);
+    const storage = localStorage.getItem('tasks');
+    const localTask = storage ? JSON.parse(storage) : [];
+    expect(localTask[0].completed).toBeTruthy();
+  });
+  test('UnChecking a task should set false to "completed" state in local storage', () => {
+    Status.toggleComplete(0);
+    const storage = localStorage.getItem('tasks');
+    const localTask = storage ? JSON.parse(storage) : [];
+    expect(localTask[0].completed).toBeFalsy();
+  });
+});
