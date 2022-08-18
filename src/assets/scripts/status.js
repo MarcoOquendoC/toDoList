@@ -7,7 +7,7 @@ export default class Status {
     if (tasks === []) return -1;
     tasks[id].description = newValue;
     localStorage.setItem('tasks', JSON.stringify(tasks));
-    return 'Description has been changed.';
+    return newValue;
   }
 
   static toggleComplete(id) {
