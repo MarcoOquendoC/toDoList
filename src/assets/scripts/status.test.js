@@ -38,3 +38,23 @@ describe('Update completed status', () => {
     expect(localTask[0].completed).toBeFalsy();
   });
 });
+
+describe('Clear all completed tasks', () => {
+  Method.add('Good task');
+  Method.add('Great task');
+  Method.add('Awesome task');
+  test('Tasks list should have a greater length before clearing', () => {
+    const storage = localStorage.getItem('tasks');
+    const localTask = storage ? JSON.parse(storage) : [];
+    expect(localTask).toHaveLength(5);
+  });
+  Status.toggleComplete(1);
+  Status.toggleComplete(2);
+  test('Clicking "Clear all completed" button should filter local storage tasks', () => {
+    Status.clearCompleted();
+    const storage = localStorage.getItem('tasks');
+    const localTask = storage ? JSON.parse(storage) : [];
+    expect(localTask).toHaveLength(3);
+  });
+});
+
